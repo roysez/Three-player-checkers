@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour {
 
+
 	// Use this for initialization
 	void Start () {
 		
@@ -12,5 +13,9 @@ public class Piece : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void SetLight(bool var){
+		gameObject.GetComponentInChildren<Light> ().enabled = var;
 	}
 }

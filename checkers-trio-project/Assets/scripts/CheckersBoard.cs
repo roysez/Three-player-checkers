@@ -6,6 +6,8 @@ public class CheckersBoard : MonoBehaviour {
 
 	public Piece[,] pieces = new Piece[12,12];
 
+	public Material material;
+
 	public GameObject greenPiecePrefab;
 	public GameObject redPiecePrefab;
 	public GameObject yellowPiecePrefab;
@@ -13,6 +15,8 @@ public class CheckersBoard : MonoBehaviour {
 	public GameObject[] blackCells;
 
 	private Piece selectedPiece;
+
+
 
 	Vector2 mouseOver;
 
@@ -25,32 +29,48 @@ public class CheckersBoard : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		// UpdateMouseOver ();
-
-		//Debug.Log (mouseOver);
 		if (Input.GetMouseButtonDown(0))
 		{
-			Debug.Log("Mouse is down");
+			//Debug.Log("Mouse is down");
 
 			RaycastHit hitInfo = new RaycastHit();
 			bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
 			if (hit) 
 			{
-				Debug.Log("Hit " + hitInfo.transform.gameObject.name);
-				if (hitInfo.transform.gameObject.tag == "BlackCell")
-				{
+				Debug.Log ("Hit " + hitInfo.transform.gameObject.name);
+				if (hitInfo.transform.gameObject.tag == "BlackCell") {
 					Debug.Log ("It's working!");
-				} if (hitInfo.transform.gameObject.tag == "GreenPiece") {
-					hitInfo.transform.gameObject.GetComponentInChildren<Light>().enabled = false;
+
+					if (selectedPiece != null) {
+						
+						selectedPiece.transform.position = hitInfo.transform.position;
+					
+						DeselectPiece ();
+
+					}
+				} else if (hitInfo.transform.gameObject.tag == "GreenPiece") {
+
+					selectedPiece = hitInfo.transform.gameObject.GetComponent<Piece> ();
+					selectedPiece.SetLight (true);
+
+				} else {
+					Debug.Log ("Nog");
+					DeselectPiece ();
 				}
-				else {
-					Debug.Log ("nopz");
-				}
+
 			} else {
 				Debug.Log("No hit");
 			}
-			Debug.Log("Mouse is down");
+			//Debug.Log("Mouse is down");
 		} 
 	}
+
+	private void DeselectPiece(){
+		if (selectedPiece != null) {
+			selectedPiece.SetLight (false);
+			selectedPiece = null;
+		}
+	}
+
 
 }
