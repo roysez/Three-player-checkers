@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\camera\CameraController.cs" />
      <Compile Include="Assets\scripts\CheckersBoard.cs" />
      <Compile Include="Assets\scripts\managers\GameManager.cs" />
      <Compile Include="Assets\scripts\managers\TextManager.cs" />

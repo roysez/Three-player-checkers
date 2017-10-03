@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 	public Player currentPlayer;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		Player greenPlayer = new Player (0);
 		Player redPlayer = new Player (2);
 		Player yellowPlayer = new Player (1);
@@ -22,10 +22,10 @@ public class GameManager : MonoBehaviour {
 		currentPlayer = greenPlayer;
 		TextManager.currentPlayerString = currentPlayer.colorOfPieces;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	public Player NextPlayer(){

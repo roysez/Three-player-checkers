@@ -29,7 +29,7 @@ public class CheckersBoard : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+
 		if (CheckPlayerCompletedAction ())
 			countOfCompletedActions++;
 
@@ -37,8 +37,8 @@ public class CheckersBoard : MonoBehaviour {
 			currentPlayer = gameManager.NextPlayer ();
 			countOfCompletedActions = 0;
 		}
-			
-			
+
+
 	}
 
 	private bool CheckPlayerCompletedAction(){
@@ -75,7 +75,7 @@ public class CheckersBoard : MonoBehaviour {
 						} else {
 							countOfCompletedActions = 0;
 						}
-							
+
 						//}
 
 						DeselectPiece ();
