@@ -42,4 +42,6 @@ public class TextManager : MonoBehaviour {
 		                "Yellow:" + +gameManager.players [1].countOfPieces + "\n" +
 		                "Red:" + gameManager.players [2].countOfPieces + "\n";
 	}
+
+	 
 }

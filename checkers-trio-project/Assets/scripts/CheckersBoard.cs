@@ -163,7 +163,7 @@ public class CheckersBoard : MonoBehaviour
 		Vector3 pieceCenter = new Vector3 (center.x, center.y + 0.22f, center.z - 0.35f);
 		Collider[] colliders = Physics.OverlapSphere (pieceCenter, 0.05f);
 
-		Debug.Log ("Видалення" + );
+		Debug.Log ("Видалення");
 
 		gameManager.hitPlayer (colliders [0].gameObject.transform.tag);
 

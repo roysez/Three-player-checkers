@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
 	public Player[] players ;
 
 	public Player currentPlayer;
+
 
 	// Use this for initialization
 	void Awake () {
@@ -29,7 +31,23 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public Player NextPlayer(){
-		currentPlayer = players [currentPlayer.id==0?1:(currentPlayer.id==1?2:0)];
+
+
+		if (CheckGameOver ()) {
+			
+			int count = 0;
+			for (int i = 0; i < 3; i++) {
+				if (players [i].countOfPieces > 0) {
+					GameObject.Find ("ConflictText").GetComponent<Text> ().text = players[i].colorOfPieces + " win the GAME";
+					GameObject.Find ("ConflictText").GetComponent<Text> ().color = new Color (255, 255, 255, 255);
+				
+					Time.timeScale = 0;
+				}
+			}
+		}
+			
+
+		currentPlayer = players [currentPlayer.id==0 && players[1].countOfPieces!=0?1:(currentPlayer.id==1 && players[2].countOfPieces!=0?2:0)];
 		TextManager.currentPlayerString = currentPlayer.colorOfPieces;
 		return currentPlayer;
 	}
@@ -44,11 +62,13 @@ public class GameManager : MonoBehaviour {
 	}
 
 	bool CheckGameOver(){
-		for (int i = 0; i < 2; i++) {
+		
+		int count = 0;
+		for (int i = 0; i < 3; i++) {
 			if (players [i].countOfPieces == 0) {
-				return true;
+				count++;
 			}
 		}
-		return false;
+		return count>1;
 	}
 }
