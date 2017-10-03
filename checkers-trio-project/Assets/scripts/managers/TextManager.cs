@@ -33,7 +33,7 @@ public class TextManager : MonoBehaviour {
 
 		curCountOfPiecesText.text = UpdateCountOfPieces ();
 		Color color = curPlayText.text == "Green" ? GREEN_COLOR : (currentPlayerString == "Red" ? RED_COLOR : YELLOW_COLOR);
-		curCountOfPiecesText.color = color;
+		curCountOfPiecesText.color = new Color(0,255,255,255);
 		curPlayText.color = color;
 	}
 
