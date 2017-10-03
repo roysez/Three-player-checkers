@@ -16,6 +16,6 @@ public class Piece : MonoBehaviour {
 	}
 
 	public void SetLight(bool var){
-		gameObject.GetComponentInChildren<Light> ().enabled = var;
+//		gameObject.GetComponentInChildren<Light> ().enabled = var;
 	}
 }

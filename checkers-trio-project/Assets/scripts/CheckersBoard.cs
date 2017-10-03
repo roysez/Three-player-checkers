@@ -47,7 +47,7 @@ public class CheckersBoard : MonoBehaviour {
 					if (selectedPiece != null) {
 
 						Vector3 positionOfCell = hitInfo.transform.position;
-						positionOfCell.y = 0.2f;
+						positionOfCell.y = 0.22f;
 						positionOfCell.z = positionOfCell.z -0.35f;
 						selectedPiece.transform.position = positionOfCell;
 					
