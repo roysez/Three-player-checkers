@@ -7,6 +7,8 @@ TagManager:
   - BlackCell
   - LightForSelectedPiece
   - GreenPiece
+  - RedPiece
+  - YellowPiece
   layers:
   - Default
   - TransparentFX

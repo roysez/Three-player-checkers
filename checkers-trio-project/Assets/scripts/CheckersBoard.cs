@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 public class CheckersBoard : MonoBehaviour {
 
@@ -16,6 +17,8 @@ public class CheckersBoard : MonoBehaviour {
 
 	private Piece selectedPiece;
 
+	private Regex regex = new Regex(@"\w*Piece\b", RegexOptions.None);
+
 
 
 	Vector2 mouseOver;
@@ -23,7 +26,7 @@ public class CheckersBoard : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
+	
 	}
 
 
@@ -42,18 +45,26 @@ public class CheckersBoard : MonoBehaviour {
 					Debug.Log ("It's working!");
 
 					if (selectedPiece != null) {
-						
-						selectedPiece.transform.position = hitInfo.transform.position;
+
+						Vector3 positionOfCell = hitInfo.transform.position;
+						positionOfCell.y = 0.2f;
+						positionOfCell.z = positionOfCell.z -0.35f;
+						selectedPiece.transform.position = positionOfCell;
 					
 						DeselectPiece ();
 
 					}
-				} else if (hitInfo.transform.gameObject.tag == "GreenPiece") {
+				} else if (regex.IsMatch(hitInfo.transform.gameObject.tag)) {
 
-					selectedPiece = hitInfo.transform.gameObject.GetComponent<Piece> ();
-					selectedPiece.SetLight (true);
+					if (selectedPiece != null) {
+						DeselectPiece ();
 
-				} else {
+					} else {
+						selectedPiece = hitInfo.transform.gameObject.GetComponent<Piece> ();
+						selectedPiece.SetLight (true);
+					}
+
+				}else {
 					Debug.Log ("Nog");
 					DeselectPiece ();
 				}
