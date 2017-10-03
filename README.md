@@ -14,6 +14,8 @@
 
 ### Ми надіємось, що наша гра допоможе вам весело провести час у компанії 3-х друзів. Приємних забав.
 
+![Alt Text](https://media.giphy.com/media/l378jJKlXTZ5wR3Lq/giphy.gif)
+
 <hr/>
 
 for <i> [BEST::HACKathon] [ GameDev ] [ HardcoreSE ] </i>
