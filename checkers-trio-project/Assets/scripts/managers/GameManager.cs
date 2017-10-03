@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	private Player[] players ;
+	public Player[] players ;
 
 	public Player currentPlayer;
 
@@ -32,6 +32,15 @@ public class GameManager : MonoBehaviour {
 		currentPlayer = players [currentPlayer.id==0?1:(currentPlayer.id==1?2:0)];
 		TextManager.currentPlayerString = currentPlayer.colorOfPieces;
 		return currentPlayer;
+	}
+
+	public void hitPlayer(string playerColor){
+		if (playerColor.Contains("Green"))
+			players [0].countOfPieces -= 1;
+		else if (playerColor.Contains("Yellow"))
+			players [1].countOfPieces -= 1;
+		else
+			players [2].countOfPieces -= 1;
 	}
 
 	bool CheckGameOver(){
