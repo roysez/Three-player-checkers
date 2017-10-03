@@ -15,7 +15,15 @@ public class Piece : MonoBehaviour {
 		
 	}
 
-	public void SetLight(bool var){
-//		gameObject.GetComponentInChildren<Light> ().enabled = var;
+	public void SetLight(bool var,Vector3 position){
+		Light light =GameObject.Find ("MovableLight").GetComponent<Light> ();
+		if (var) {
+			
+			position.y = 1.35f;
+			light.transform.position = position;
+			light.enabled = true;
+		} else
+			light.enabled = var;
+
 	}
 }

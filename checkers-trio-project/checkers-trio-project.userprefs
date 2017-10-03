@@ -1,9 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\CheckersBoard.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Player.cs">
     <Files>
-      <File FileName="Assets\scripts\CheckersBoard.cs" Line="50" Column="32" />
-      <File FileName="Assets\scripts\Piece.cs" Line="17" Column="2" />
+      <File FileName="Assets\scripts\CheckersBoard.cs" Line="108" Column="58" />
+      <File FileName="Assets\scripts\Piece.cs" Line="22" Column="23" />
+      <File FileName="Assets\scripts\Player.cs" Line="23" Column="3" />
+      <File FileName="Assets\scripts\managers\TextManager.cs" Line="8" Column="45" />
+      <File FileName="Assets\scripts\managers\GameManager.cs" Line="33" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
