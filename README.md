@@ -1,6 +1,8 @@
 # Trickers
 ## Three-player checkers
-![](https://media.giphy.com/media/l378aqhKTynBsRjiw/giphy.gif)
+
+<a href="https://imgflip.com/gif/1xap7l"><img src="https://i.imgflip.com/1xap7l.gif" title="made at imgflip.com"/></a>
+
 <hr/>
 
 Існує багато різновидів шашок, найпопулярнішими з них є шашки на двох. Ви колись потрапляли у ситуацію, коли ваш третій друг змушений чекати, поки ви з другим закінчите інтелектуальний батл вилитий у партію шашок. Так ось, відтепер третій НЕ зайвий=))).  
