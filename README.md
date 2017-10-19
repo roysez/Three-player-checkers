@@ -5,16 +5,19 @@
 
 <hr/>
 
-Існує багато різновидів шашок, найпопулярнішими з них є шашки на двох. Ви колись потрапляли у ситуацію, коли ваш третій друг змушений чекати, поки ви з другим закінчите інтелектуальний батл вилитий у партію шашок. Так ось, відтепер третій НЕ зайвий=))).  
+There are many variations of checkers, the most popular of them are checkers for two. <br/>
+You've ever gotten into a situation where your third friend is forced to wait until you <br/>
+finish the intellectual batl with a second in the checkers party. <br/>
+So, now the third is NOT superfluous =))). 
 
-### Загалом правила нагадують усім нам відомі шашки на двох, але зі своїми особливостями:
+### In general, the rules are reminiscent of all of us known checkers for two, but with their features:
 
-•	Кожен гравець має по 12 шашок. <br/>
-•	Можна Рухатись у будь-якому напрямку, переміщаючись лише по чорних трикутниках. <br/>
-•	Бити можна лише одну шашку за раз. <br/>
-•	Гравець виграє лише за умови відсутності шашок у інших двох гравців. <br/>
+•	Each player has 12 checkers. <br/>
+•	You can move in any direction, moving only in black triangles <br/>
+•	You can only beat one checker at a time. <br/>
+•	The player wins only if there are no checkers from the other two players <br/>
 
-### Ми надіємось, що наша гра допоможе вам весело провести час у компанії 3-х друзів. Приємних забав.
+### We hope that our game will help you have fun in the company of 3 friends. Have fun :)
 
 
 
